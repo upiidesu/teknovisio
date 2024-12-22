@@ -214,13 +214,13 @@ body {
 .container {
     padding: 5rem 6%;
 }
-.about-title {
+.title {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.about-title::after {
+.title::after {
     content: '';
     display: block;
     min-width: 3rem;
@@ -230,7 +230,7 @@ body {
     border-radius: 2rem;
 }
 
-.about-text {
+.text {
     text-align: center;
     font-size: .9rem;
     font-weight: 300;
@@ -259,8 +259,80 @@ body {
 }
 
 
+/* <=========== SERVICES ==========> */
+.services {
+    background-color: rgb(249, 249, 255);
+}
 
+.services-container {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+    /* background-color: #049FF6; */
+}
 
+.services-content {
+    background-color: rgba(240, 240, 240, 0.7);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service {
+    display: flex;
+    align-items: stretch;
+    height: max-content;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.reverse .service-desc {
+    margin: 0 .8rem 0 0;
+    margin-left: auto;
+    text-align: end;
+}
+
+.service img {
+    width: 100px;
+    margin-right: .8rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.service-desc {
+    display: flex;
+    flex-direction: column;
+}
+.service-desc h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.service-desc p {
+    font-size: .8rem;
+}
+.service-desc button {
+    padding: .3rem 1rem;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 2px solid var(--primary);
+    margin-top: .5rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all .2s;
+    margin-top: auto;
+}
+.reverse .service-desc button {
+    align-self: flex-end;
+}
+
+.service-desc button:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
 
 
 /* <====================== Query =====================> */
@@ -330,6 +402,30 @@ body {
     .about-desc p {
         font-size: 1.1rem;
     }
+
+
+    /* Services */
+    .services-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .services-content {
+        width: 100%;
+    }
+    .service img {
+        width: 80px;
+    }
+    .service-desc h4 {
+        font-size: 1.1rem;
+    }
+    .service-desc p {
+        font-size: .9rem;
+        line-height: 1.1rem;
+    }
+    .service-desc button {
+        font-size: .9rem;
+        margin-bottom: .4rem;
+    }
 }
 
 
@@ -337,6 +433,10 @@ body {
 @media (max-width: 540px) {
     html {
         font-size: 65%;
+    }
+
+    .navbar-logo img {
+        width: 130px;
     }
 
     .navbar-brand img {
