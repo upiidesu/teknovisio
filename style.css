@@ -475,6 +475,9 @@ body {
 
 
     /* Splide */
+    .splide__slide {
+        min-height: 80vh;
+    }
     .splide-content {
         gap: 2rem;
     }
