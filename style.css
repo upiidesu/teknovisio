@@ -210,6 +210,53 @@ body {
 }
 
 
+/* <=========== ABOUT US ==========> */
+.container {
+    padding: 5rem 6%;
+}
+.about-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.about-title::after {
+    content: '';
+    display: block;
+    min-width: 3rem;
+    max-width: fit-content;
+    margin: .5rem auto;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 2rem;
+}
+
+.about-text {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.about-container {
+    display: flex;
+    gap: 4rem;
+}
+.about-container img {
+    max-height: 320px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, .3);
+}
+
+.about-desc h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.about-desc p {
+    margin: 1rem 0;
+    font-size: .9rem;
+}
+.about-desc p span {
+    font-weight: 600;
+}
 
 
 
@@ -263,6 +310,25 @@ body {
     .splide-title {
         font-size: 2.5rem;
         line-height: 2.8rem;
+    }
+
+
+    /* About */
+    .container {
+        padding: 7rem 6%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-container img {
+        max-height: 400px;
+    }
+
+    .about-desc p {
+        font-size: 1.1rem;
     }
 }
 
