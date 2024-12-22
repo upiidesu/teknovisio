@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teknovisio Bandung</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="img/logo/tb-circle.png" />
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+        />
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- SplideJS -->
+        <link
+            href="
+        https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+        "
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Info -->
+        <section class="info">
+            <div class="info-container">
+                <p class="info-contact">
+                    <i class="ri-phone-fill"></i>0812 - 1723 - 2752
+                </p>
+                <p class="info-time">
+                    <i class="ri-time-line"></i>08.00 - 21.00
+                </p>
+            </div>
+        </section>
+
+        <!-- <========== NAVBAR ==========> -->
+        <nav class="navbar">
+            <!-- logo -->
+            <a href="#" class="navbar-logo">
+                <img src="img/logo/tb-logo.png" alt="Jastipz" width="170" />
+            </a>
+
+            <!-- nav link -->
+            <div class="navbar-nav">
+                <a href="#home" class="active-link">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- humburger -->
+            <div class="navbar-extra">
+                <a href="#" id="hamburger-menu">
+                    <i class="ri-menu-3-line"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- <========== HOME ==========> -->
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide" style="background-image: url(img/1.jpg);">
+                        <div class="splide-content">
+                            <h4 class="splide-tagline">Kami Ahli dan Berpengalaman</h4>
+                            <h1 class="splide-title">PEMBUATAN NEON BOX & NEON SIGN <br> <span>DESAIN UNIK DAN PROFESIONAL</span></h1>
+                            <p class="splide-desc">
+                                Kami melayani pembuatan neon box dan neon sign dengan kualitas terbaik dan desain menarik untuk kebutuhan usaha Anda. 
+                                Dengan bahan berkualitas dan pengerjaan yang presisi, kami siap membantu mempromosikan bisnis Anda.
+                            </p>
+                            <div class="splide-btn">
+                                <a href="#about" class="btn btn1">View More</a>
+                                <a href="#services" class=" btn btn2">View Project</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide" style="background-image: url(img/2.jpg);">
+                        <div class="splide-content">
+                            <h4 class="splide-tagline">Kualitas dan Keamanan Terjamin</h4>
+                            <h1 class="splide-title">PEMBUATAN RAILING TANGGA & PAGAR <br> <span>ELEGAN DAN KOKOH</span></h1>
+                            <p class="splide-desc">
+                                Kami menyediakan jasa pembuatan railing tangga dan pagar dengan desain modern dan ketahanan tinggi. 
+                                Berikan perlindungan ekstra pada rumah atau properti Anda dengan hasil pengerjaan yang rapi dan berkualitas.
+                            </p>
+                            <div class="splide-btn">
+                                <a href="#about" class="btn btn1">View More</a>
+                                <a href="#services" class=" btn btn2">View Project</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide" style="background-image: url(img/3.jpg);">
+                        <div class="splide-content">
+                            <h4 class="splide-tagline">Solusi Praktis dan Berkualitas</h4>
+                            <h1 class="splide-title">ROLLING DOOR & FOLDING GATE <br> <span>UNTUK KEAMANAN DAN KENYAMANAN</span></h1>
+                            <p class="splide-desc">
+                                Jasa pembuatan rolling door dan folding gate dengan mekanisme yang mudah digunakan dan bahan yang tahan lama. 
+                                Cocok untuk kebutuhan perumahan, toko, atau gudang Anda dengan harga kompetitif.
+                            </p>
+                            <div class="splide-btn">
+                                <a href="#about" class="btn btn1">View More</a>
+                                <a href="#services" class=" btn btn2">View Project</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: "50",
+                duration: 1200,
+                easing: "ease-out-back", // Membuat efek memantul
+                once: false,
+            });
+        </script>
+
+        <!-- EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <!-- SplideJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script>
+            var splide = new Splide(".splide", {
+                type: "loop",
+                pagination: false,
+            });
+
+            splide.mount();
+        </script>
+    </body>
+</html>
