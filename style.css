@@ -260,15 +260,15 @@ body {
 
 
 /* <=========== SERVICES ==========> */
-.services {
-    /* background-color: rgb(249, 249, 255); */
+.services, .contact {
     background-image: url(img/bg.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     position: relative;
 }
-.services::before {
+.services::before,
+.contact::before {
     content: '';
     position: absolute;
     top: 0;
@@ -358,7 +358,7 @@ body {
 
 /* <=========== Why Choos Us ==========> */
 .choose {
-    background-color: #f9f8ff;
+    /* background-color: #f9f8ff; */
     padding-top: 3rem !important;
 }
 
@@ -409,6 +409,136 @@ body {
 }
 
 
+/* <=========== TESTIMONIALS ==========> */
+.testi {
+    background-color: #faf9ff;
+}
+.testi-list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+.testi-list.reverse {
+    flex-direction: row-reverse;
+}
+
+.testi-profile img {
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .2);
+    transition: all .3s;
+}
+.testi-profile img:hover {
+    transform: scale(1.02);
+}
+
+.testi-name {
+    text-align: center;
+    color: #282828;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-top: .5rem;
+}
+
+.testi-desc {
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    transform: translateY(-1.2rem);
+}
+
+
+/* <=========== Contact ==========> */
+.contact {
+    background-image: url(img/2.png);
+}
+.contact::before {
+    background-color: rgba(228, 228, 228, 0.711);
+}
+
+.contact-title, .contact-text, .contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    align-items: center;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.maps-container iframe {
+    width: 500px;
+    height: 272px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(204, 204, 204, 0.5);
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.875);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    gap: .5rem;
+}
+
+.contact-group {
+    display: flex;
+    gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: .5rem .8rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-width: 100%;
+    height: 7rem;
+    resize: none;
+    font-family: 'Poppins';
+}
+
+.contact-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .6rem 2rem;
+    /* margin-top: 1rem; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-message {
+    font-size: .7rem;
+    margin-right: auto;
+    padding: 0 .5rem;
+}
 
 
 
@@ -519,6 +649,27 @@ body {
         width: 45px;
         height: 45px;
     }
+
+
+    /* Testi */
+    .testi-list {
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
+    .testi-profile img {
+        width: 120px;
+    }
+    .testi-desc {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+
+    /* Contact */
+    .maps-container iframe {
+        width: 410px;
+        height: 215px;
+    }
 }
 
 
@@ -588,5 +739,25 @@ body {
     }
     .choice-desc p {
         font-size: 1rem;
+    }
+
+
+    /* Testi */
+    .testi-list {
+        margin-bottom: 3rem;
+        gap: 2rem;
+    }
+    .testi-list.reverse {
+        margin-bottom: 0;
+    }
+
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .maps-container iframe {
+        width: 343px;
+        height: 182px;
     }
 }
