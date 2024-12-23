@@ -80,7 +80,7 @@ const sendEmail = (e) => {
         .then(
             () => {
                 // Show sent message
-                contactMessage.textContent = "Message sent succesfully!! ✔";
+                contactMessage.textContent = "Pesan Berhasil Terkirim!! ✔";
 
                 // Remove message after 5s
                 setTimeout(() => {
@@ -93,7 +93,7 @@ const sendEmail = (e) => {
             () => {
                 // Error message
                 contactMessage.textContent =
-                    "Message not sent (service error)!! ✖";
+                    "Pesan Tidak Terikirm (service error)!! ✖";
             }
         );
 };

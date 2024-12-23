@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    height: 4000px;
+    /* height: 4000px; */
     font-family: "Poppins";
 }
 
@@ -535,7 +535,7 @@ body {
 }
 
 .contact-message {
-    font-size: .7rem;
+    font-size: .85rem;
     margin-right: auto;
     padding: 0 .5rem;
 }
@@ -670,6 +670,21 @@ body {
         width: 410px;
         height: 215px;
     }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.1rem;
+        padding: .8rem;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact-message {
+        font-size: .9rem;
+        margin: .3rem;
+    }
 }
 
 
@@ -757,7 +772,16 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .maps-container iframe {
-        width: 343px;
-        height: 182px;
+        width: 100%;
+        height: 202px;
+    }
+    .contact-group {
+        flex-direction: column;
+        min-width: 100%;
+        gap: .8rem;
+    }
+    .contact-form {
+        min-width: 100%;
+        gap: .8rem;
     }
 }
