@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="description" content="Pembuatan neon box, neon sign, railing tangga, rolling door, dan konstruksi berkualitas di Bandung. Solusi desain dan konstruksi profesional." />
+        <meta name="keywords" content="Neon Box, Neon Sign, Railing Tangga, Rolling Door, Bandung, Jasa Konstruksi, Teknovisio Bandung" />
+        <meta name="author" content="Teknovisio Bandung" />
+
         <title>Teknovisio Bandung</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="img/logo/tb-circle.png" />
@@ -30,6 +35,12 @@
         https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         "
             rel="stylesheet"
+        />
+
+        <!-- Sweet Alert -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
         />
     </head>
     <body>
@@ -150,7 +161,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Custom Neon Box</h4>
                             <p>Neon box berkualitas tinggi dengan desain menarik untuk promosi usaha Anda.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Custom Neon Box">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 2 : Neon Sign -->
@@ -159,7 +170,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Custom Neon Sign</h4>
                             <p>Neon sign kreatif untuk mempercantik ruang atau branding bisnis Anda.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Custom Neon Sign">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 3 : Kanopi -->
@@ -168,7 +179,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Kanopi</h4>
                             <p>Kanopi modern dari berbagai macam bahan seperti Spandek, Alderon, Solartuff, dan Bajaringan</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Kanopi">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 4 : Railing Tangga -->
@@ -177,7 +188,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Railing Tangga</h4>
                             <p>Railing tangga elegan dengan material kokoh untuk keamanan maksimal.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Railing Tangga">Pesan Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -190,7 +201,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Pagar</h4>
                             <p>Pagar custom dengan desain estetis dan keamanan yang terjamin.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Pagar">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 6 : Tralis -->
@@ -199,7 +210,7 @@
                         <div class="service-desc">
                             <h4>Pembuatan Tralis</h4>
                             <p>Tralis berkualitas tinggi untuk perlindungan ekstra pada jendela dan pintu Anda.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Tralis">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 7 : Rolling Door -->
@@ -208,16 +219,16 @@
                         <div class="service-desc">
                             <h4>Pembuatan Rolling Door</h4>
                             <p>Rolling door praktis dan kuat untuk kebutuhan toko, gudang, atau rumah Anda.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button type="submit" class="btn-order" data-service="Pembuatan Rolling Door">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- service 8 : Folding Gate -->
                     <div class="service reverse">
                         <img src="img/service/folding-gate.jpg" alt="Folding Gate">
                         <div class="service-desc">
-                            <h4>Pembuatan Custom Neon Box</h4>
+                            <h4>Pembuatan Folding Gate</h4>
                             <p>Folding gate tahan lama dengan mekanisme mudah untuk keamanan properti Anda.</p>
-                            <button type="submit">Pesan Sekarang</button>
+                            <button class="btn-order" data-service="Pembuatan Folding Gate">Pesan Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -264,7 +275,7 @@
         </section>
 
 
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
 
         <!-- AOS -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -292,8 +303,31 @@
                 pauseOnHover: false,
                 pauseOnFocus: false, 
             });
-
             splide.mount();
+        </script>
+
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.querySelectorAll(".btn-order").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const serviceName = button.getAttribute("data-service");
+                    Swal.fire({
+                        title: "Pesan Sekarang?",
+                        html: `Apakah Anda ingin menanyakan detail jasa untuk <b>${serviceName}?</b>`,
+                        showCancelButton: true,
+                        confirmButtonText: "Lanjut",
+                        cancelButtonText: "Batal",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            const whatsappUrl = `https://wa.me/+6281224238689?text=${encodeURIComponent(
+                                `Permisi dengan Admin *Teknovisio Bandung* \nSaya ingin menanyakan detail jasa untuk *${serviceName}*\nTerima Kasih.`
+                            )}`;
+                            window.open(whatsappUrl, "_blank");
+                        }
+                    });
+                });
+            });
         </script>
     </body>
 </html>

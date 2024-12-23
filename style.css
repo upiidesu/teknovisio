@@ -339,7 +339,7 @@ body {
     padding: .3rem 1rem;
     background-color: transparent;
     border-radius: 4px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     margin-top: .5rem;
     cursor: pointer;
     align-self: flex-start;
