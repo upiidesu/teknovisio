@@ -216,7 +216,7 @@ body {
 }
 .title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -358,7 +358,8 @@ body {
 
 /* <=========== Why Choos Us ==========> */
 .choose {
-    background-color: #f5f3ff;
+    background-color: #f9f8ff;
+    padding-top: 3rem !important;
 }
 
 .choose-container {
