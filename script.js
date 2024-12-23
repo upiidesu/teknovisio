@@ -99,32 +99,3 @@ const sendEmail = (e) => {
 };
 
 contactForm.addEventListener("submit", sendEmail);
-
-/* ==================== SLIDER ==================== */
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-
-let currentIndex = 0;
-
-function updateSlider() {
-    const width = slides[0].clientWidth;
-    slider.style.transform = `translateX(-${currentIndex * width}px)`;
-}
-
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlider();
-}
-
-function showPrevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlider();
-}
-
-next.addEventListener("click", showNextSlide);
-prev.addEventListener("click", showPrevSlide);
-
-// Auto-update slider size on window resize
-window.addEventListener("resize", updateSlider);

@@ -275,7 +275,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     z-index: 1;
 }
 
@@ -292,8 +292,8 @@ body {
 }
 
 .services-content {
-    background-color: rgba(240, 240, 240, 0.6);
-    backdrop-filter: blur(3px);
+    background-color: rgba(245, 245, 245, 0.5);
+    backdrop-filter: blur(4px);
     padding: 2rem;
     border-radius: 1rem;
     width: 48%;
@@ -339,7 +339,7 @@ body {
     padding: .3rem 1rem;
     background-color: transparent;
     border-radius: 4px;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary);
     margin-top: .5rem;
     cursor: pointer;
     align-self: flex-start;
@@ -354,6 +354,65 @@ body {
     background-color: var(--primary);
     color: var(--white);
 }
+
+
+/* <=========== Why Choos Us ==========> */
+.choose {
+    background-color: #f5f3ff;
+}
+
+.choose-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.choice i {
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.choice:hover i {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.choice-desc {
+    text-align: center;
+}
+.choice-desc h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+}
+.choice-desc p {
+    font-size: .91rem;
+}
+
+
+
+
+
+
+
 
 
 /* <====================== Query =====================> */
@@ -447,6 +506,18 @@ body {
         font-size: .9rem;
         margin-bottom: .4rem;
     }
+
+
+    /* Choose */
+    .choose-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .choice i {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 
@@ -476,7 +547,7 @@ body {
 
     /* Splide */
     .splide__slide {
-        min-height: 80vh;
+        min-height: 90vh;
     }
     .splide-content {
         gap: 2rem;
@@ -487,5 +558,34 @@ body {
     }
     .splide-title span {
         text-shadow: 0px 0px 1px rgba(0, 0, 0, .3);
+    }
+
+
+    /* Choose */
+    .choose-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    .choice {
+        flex-direction: row;
+    }
+
+    .choice i {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .choice-desc {
+        text-align: start;
+    }
+
+    .choice-desc h4 {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+    .choice-desc p {
+        font-size: 1rem;
     }
 }
