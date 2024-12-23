@@ -72,7 +72,7 @@ const sendEmail = (e) => {
     emailjs
         .sendForm(
             "service_fb1spgf",
-            "template_ajzqxw7",
+            "template_wn3czbb",
             "#contact-form",
             "EJTa5kpXMO05E89Vd"
         )
