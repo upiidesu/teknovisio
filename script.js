@@ -98,3 +98,15 @@ const sendEmail = (e) => {
         );
 };
 contactForm.addEventListener("submit", sendEmail);
+
+
+/* ==================== WHATSAPP WINDOW ==================== */
+document.getElementById("waBtn").addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah form submit bawaan
+    
+    // Mengambil teks dari label
+    const message = document.getElementById("waLabel").textContent.trim();
+
+    // Membuat URL WhatsApp
+    window.open('http://wa.me/6281916393062?text=' + encodeURIComponent(message));
+});
