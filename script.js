@@ -108,5 +108,5 @@ document.getElementById("waBtn").addEventListener("click", function (event) {
     const message = document.getElementById("waLabel").textContent.trim();
 
     // Membuat URL WhatsApp
-    window.open('http://wa.me/6281916393062?text=' + encodeURIComponent(message));
+    window.open('http://wa.me/6281224238689?text=' + encodeURIComponent(message));
 });
